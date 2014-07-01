@@ -1,0 +1,55 @@
+.container{
+	width: 80%;
+	height: 600px;
+	background-color: pink;
+	margin:50px auto;
+	overflow: hidden;
+
+	}
+
+.outer-shell{
+	background-color: darkgray;
+	width: 75%;
+	height: 450px;
+	margin-left: 16%;
+	margin-top: 7%;
+	overflow: hidden;
+
+
+}
+
+.inner-shell{
+	background-color: black;
+	width: 67%;
+	height: 80px;
+	margin-left: 26%;
+	padding-top: 38%;
+	margin-top: 2%;
+
+
+}
+
+li{
+	list-style-type: none;
+}
+
+.left-AM-PM-Auto-labels{
+	color: white;
+	/*background-color: yellow;*/
+}
+
+.clock-screen{
+	background-color: darkred;
+}
+
+.clock-AM-PM-indicator{
+	background-color: red;
+}
+
+.clock-text{
+	color: red;
+}
+
+.bottom-Am-label-Freq .bottom-Fm-label-Freq{
+	color: white;
+}
