@@ -17,9 +17,9 @@ var bottomFmLabelAndFreq = $('<div class="bottom-Fm-label-Freq"></div>');
 
 
 /* a contains b */
-var bAppendToA = function(a,b){
-	b.append(a);
-};
+// var bAppendToA = function(a,b){
+// 	b.append(a);
+// };
 
 $(document).on('ready', function() {
 	// bAppendToA($('.container'), outerShell,);
