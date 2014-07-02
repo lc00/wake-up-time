@@ -31,11 +31,13 @@
 
 }
 ul {
-
+	top: 10px;
+	float: left;
 }
 
 li{
 	list-style-type: none;
+	padding-bottom: 20px;
 
 }
 
@@ -50,10 +52,21 @@ li{
 
 .clock-screen{
 	background-color: darkred;
+	width: 60%;
+	height: 200px;
+	float: right;
+	display: inline-block;
+	margin-top: -270px;
+	margin-right: 83px;
+
 }
 
 .clock-AM-PM-indicator{
 	background-color: red;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+
 }
 
 .clock-text{

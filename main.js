@@ -28,6 +28,10 @@ $(document).on('ready', function() {
 	outerShell.appendTo('.container');
 	innerShell.appendTo(outerShell);
 	leftAmPmAutoLabels.appendTo(innerShell);
+	clockScreen.appendTo(innerShell);
+	clockAmPmIndicator.appendTo(clockScreen);
+	
+
 
 
 });
