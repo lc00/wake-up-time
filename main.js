@@ -9,9 +9,9 @@ var leftAmPmAutoLabels = $('<div class="left-AM-PM-Auto-labels">' +
 							'</div>');
 var clockScreen = $('<div class="clock-screen"></div>');
 var clockAmPmIndicator = $('<div class="clock-AM-PM-indicator"></div>');
-var clockText = $('<div class="clock-text"></div>');
-var bottomAmLabelAndFreq = $('<div class="bottom-Am-label-Freq"></div>');
-var bottomFmLabelAndFreq = $('<div class="bottom-Fm-label-Freq"></div>');
+var clockText = $('<div class="clock-text">10:20</div>');
+var bottomAmLabelAndFreq = $('<div class="bottom-Am-label-Freq">AM<span class="spacing">53 60 70 90 110 140 170</span></div>');
+var bottomFmLabelAndFreq = $('<div class="bottom-Fm-label-Freq">FM<span class="spacing">88 92 96 102 106 108</span></div>');
 
 
 
@@ -28,7 +28,8 @@ $(document).on('ready', function() {
 	$('.container').append(outerShell);
 	outerShell.append(innerShell);
 	innerShell.append(leftAmPmAutoLabels, clockScreen);
-	clockScreen.append(clockAmPmIndicator);
+	clockScreen.append(clockAmPmIndicator, clockText);
+	innerShell.append(bottomAmLabelAndFreq, bottomFmLabelAndFreq);
 
 
 	// outerShell.appendTo('.container');
