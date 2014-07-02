@@ -25,11 +25,17 @@ $(document).on('ready', function() {
 	// bAppendToA($('.container'), outerShell,);
 	// bAppendToA(innerShell, outerShell);
 	// bAppendToA(leftAmPmAutoLabels, innerShell);
-	outerShell.appendTo('.container');
-	innerShell.appendTo(outerShell);
-	leftAmPmAutoLabels.appendTo(innerShell);
-	clockScreen.appendTo(innerShell);
-	clockAmPmIndicator.appendTo(clockScreen);
+	$('.container').append(outerShell);
+	outerShell.append(innerShell);
+	innerShell.append(leftAmPmAutoLabels, clockScreen);
+	clockScreen.append(clockAmPmIndicator);
+
+
+	// outerShell.appendTo('.container');
+	// innerShell.appendTo(outerShell);
+	// leftAmPmAutoLabels.appendTo(innerShell);
+	// clockScreen.appendTo(innerShell);
+	// clockAmPmIndicator.appendTo(clockScreen);
 	
 
 
