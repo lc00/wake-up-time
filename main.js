@@ -31,13 +31,9 @@ $(document).on('ready', function() {
 	clockScreen.append(clockAmPmIndicator, clockText);
 	innerShell.append(bottomAmLabelAndFreq, bottomFmLabelAndFreq);
 
-
-	// outerShell.appendTo('.container');
-	// innerShell.appendTo(outerShell);
-	// leftAmPmAutoLabels.appendTo(innerShell);
-	// clockScreen.appendTo(innerShell);
-	// clockAmPmIndicator.appendTo(clockScreen);
-	
+	var day  = new Date();
+	var time = day.getHours() + ":" + day.getMinutes() + ":" + day.getSeconds();
+	console.log(time)
 
 
 
