@@ -9,11 +9,15 @@ var leftAmPmAutoLabels = $('<div class="left-AM-PM-Auto-labels">' +
 							'</div>');
 var clockScreen = $('<div class="clock-screen"></div>');
 var clockAmPmIndicator = $('<div class="clock-AM-PM-indicator"></div>');
-var clockText = $('<div class="clock-text">10:20</div>');
+var clockText = $('<div class="clock-text"></div>');
 var bottomAmLabelAndFreq = $('<div class="bottom-Am-label-Freq">AM<span class="spacing">53 60 70 90 110 140 170</span></div>');
 var bottomFmLabelAndFreq = $('<div class="bottom-Fm-label-Freq">FM<span class="spacing">88 92 96 102 106 108</span></div>');
 
-
+var timeReport = function(){
+	var day  = new Date();
+	var time = day.getHours() + ":" + day.getMinutes() + ":" + day.getSeconds();
+	return time;
+};
 
 
 /* a contains b */
@@ -31,10 +35,19 @@ $(document).on('ready', function() {
 	clockScreen.append(clockAmPmIndicator, clockText);
 	innerShell.append(bottomAmLabelAndFreq, bottomFmLabelAndFreq);
 
-	var day  = new Date();
-	var time = day.getHours() + ":" + day.getMinutes() + ":" + day.getSeconds();
-	console.log(time)
 
+	setInterval(function(){
+		var time = timeReport();
+		time = time.split(':');
+		if (time[1].length !== 2 ){
+			time[1] = '0' + time[1];
+		}
+		if( time[2].length !== 2 ){
+			time[2] = '0' + time[2];			
+		}
+		time= time.join(':');
+		$('.clock-text').text(time);
+	}, 1000)
 
 
 });
